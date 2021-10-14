@@ -16,7 +16,7 @@
         <p id="target" class="display-4">Your Time</p>
         <p><img src="Timer.jpg"/><p id="countdown" class="display-4">Count</p></p>
         <button type="button" class="btn btn-primary" onclick="startTime()">Start Timer</button>
-        <button type="button" class="btn btn-warning" onclick="recordReact()">React Now</button>
+        <button type="button" class="btn btn-success" onclick="recordReact()">React Now</button>
     </div>
 
     <script>
@@ -40,9 +40,9 @@
                     document.getElementById("target").innerHTML = "Too Slow";
                 }
                 else{
-                    now=Date.now();
-                    differnce=now-myTime
-                    document.getElementById("target").innerHTML = "Time was " + differnce + " ms"
+                    Present=Date.now();
+                    diff=Present-myTime
+                    document.getElementById("target").innerHTML = "Time was " + diff + " ms"
                     myTime = undefined
                 }
             },3000)
