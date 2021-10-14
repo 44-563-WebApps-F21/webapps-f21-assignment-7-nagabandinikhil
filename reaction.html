@@ -26,13 +26,14 @@
             myTime = Date.now();
             console.log(myTime);
         }
-        
+
         function startTime(){
+            let Count1 = Math.round(Math.random() * (10 - 2) + 2);
             for (let i = 0; i <= 3; i++) {
                 j = (3 - i) * 1000;
                 setTimeout(() => {
                     document.getElementById("countdown").innerHTML = i;
-                }, j)
+                },(Count1 -1 - i) * 1000);
             }
             setTimeout(()=> {
                 if(myTime==undefined)
@@ -45,7 +46,7 @@
                     document.getElementById("target").innerHTML = "Time was " + diff + " ms"
                     myTime = undefined
                 }
-            },3000)
+            },(Count1 - 1) * 1000);
         }
     </script>
 

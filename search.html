@@ -90,6 +90,20 @@
 				}
 				return Math.max(Math.abs(veritcal_2 - veritcal_1), Math.abs(horizontal_2 - horizontal_1))
 			}
+            function newGame() {
+            triesCount = 0;
+            animalLocation = Math.round(Math.random() * (23 - 0) + 0);
+            document.getElementById("tries").innerHTML = "Number of tries is zero";
+            disaniamal = "unknown"
+            document.getElementById("distance").innerHTML = "Distance is " + disaniamal;
+            for (var i = 0; i <= 23; i++) {
+                if(ids[i]== ids[animalLocation])
+                document.getElementById(ids[i]).src = "animal.jpg";
+                else
+                document.getElementById(ids[i]).src = "tree.jpg";
+            }
+
+        }
     </script>
 
 </body>

@@ -85,6 +85,22 @@
             }
         }
     }
+
+    function removeDups() {
+        StackItems = document.getElementsByClassName('stack');
+        for (let i = 0; i < StackItems.length; i++) {
+            element = StackItems[i].innerHTML;
+            for (let j = i + 1; j < StackItems.length; j++) {
+                element1 = StackItems[j].innerHTML;
+                if (element == element1) {
+                    console.log(StackItems[j])
+                    StackItems[j].remove();
+                    j--;
+                    i--;
+                }
+            }
+        }
+    }
 </script>
 
 </html>
