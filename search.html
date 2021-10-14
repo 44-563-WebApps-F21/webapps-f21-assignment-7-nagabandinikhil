@@ -16,6 +16,7 @@
     <p style="margin-left:20px; font-size: 20px; color: rgb(0, 4, 255);">Click on the squares to search for wild life</p>
     <p id="tries" style="margin-left:20px; font-size: 20px; color: rgb(33, 197, 96);">Number of tries is zero</p>
     <p id="distance" style="margin-left:20px; font-size: 20px; color: deeppink;">Distance is unknown</p>
+    <button onclick="newGame()" class="btn btn-success">Reset</button>
     <br>
     <div class="container">
         <div class="row">
@@ -98,9 +99,9 @@
             document.getElementById("distance").innerHTML = "Distance is " + disaniamal;
             for (var i = 0; i <= 23; i++) {
                 if(ids[i]== ids[animalLocation])
-                document.getElementById(ids[i]).src = "animal.jpg";
+                document.getElementById(ids[i]).src = "Tiger.jpg";
                 else
-                document.getElementById(ids[i]).src = "tree.jpg";
+                document.getElementById(ids[i]).src = "plant.jpg";
             }
 
         }
